@@ -18,16 +18,20 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #f1f5f8;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .btn-danger {
+    @apply bg-rose-600 text-rose-100 rounded-md border p-2;
+  }
+  .card-belanja {
+    @apply flex flex-row justify-between text-white p-3 border rounded-md bg-violet-700;
   }
 }

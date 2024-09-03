@@ -41,6 +41,7 @@ export default async function Page() {
             id={uang._id}
             nama={uang.nama}
             harga={uang.harga}
+            createdAt={uang.createdAt}
           />
         ))}
       </div>

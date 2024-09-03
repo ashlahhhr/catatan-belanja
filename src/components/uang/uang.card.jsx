@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import React from "react";
 
-export const UangCard = ({ id, nama, harga }) => {
+export const UangCard = ({ id, nama, harga, createdAt }) => {
   const router = useRouter();
   async function handleDeleteUang() {
     await fetch("https://v1.appbackend.io/v1/rows/IjK3wKlP4v21", {
@@ -21,13 +21,13 @@ export const UangCard = ({ id, nama, harga }) => {
       <div className="flex flex-col">
         <h1>{nama}</h1>
         <h1>{harga}</h1>
-        {/* <p className="text-sm text-slate-300">
+        <p className="text-sm text-slate-300">
           {new Date(createdAt).toLocaleDateString("id-ID", {
             day: "numeric",
             month: "long",
             year: "numeric",
           })}
-        </p> */}
+        </p>
       </div>
       <button className="btn-danger" onClick={handleDeleteUang}>
         delete

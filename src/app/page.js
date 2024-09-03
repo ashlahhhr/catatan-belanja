@@ -16,23 +16,33 @@ async function getUang() {
 
 export default async function Page() {
   const { data } = await getUang();
-
+  console.log(data);
   return (
     <div className=" space-y-2">
       <UangCreate />
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {data.map((uang) => {
-          return (
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {Array.isArray(data) ? (
+          data.map((uang) => (
             <UangCard
               key={uang._id}
               id={uang._id}
               nama={uang.nama}
               harga={uang.harga}
-              createdAt={uang.createdAt}
             />
-          );
-        })}
+          ))
+        ) : (
+          <p>ga ada datanya</p>
+        )}
+      </div> */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {data?.map((uang) => (
+          <UangCard
+            key={uang._id}
+            id={uang._id}
+            nama={uang.nama}
+            harga={uang.harga}
+          />
+        ))}
       </div>
     </div>
   );

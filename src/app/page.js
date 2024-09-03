@@ -34,7 +34,7 @@ export default async function Page() {
           <p>ga ada datanya</p>
         )}
       </div> */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 min-w-90 gap-4">
         {data?.map((uang) => (
           <UangCard
             key={uang._id}

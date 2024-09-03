@@ -19,8 +19,6 @@ export const UangCard = ({ id, nama, harga, createdAt }) => {
   return (
     <div className="card-belanja">
       <div className="flex flex-col">
-        <h1>{nama}</h1>
-        <h1>{harga}</h1>
         <p className="text-sm text-slate-300">
           {new Date(createdAt).toLocaleDateString("id-ID", {
             day: "numeric",
@@ -28,6 +26,8 @@ export const UangCard = ({ id, nama, harga, createdAt }) => {
             year: "numeric",
           })}
         </p>
+        <h1>{nama}</h1>
+        <h1>{harga}</h1>
       </div>
       <button className="btn-danger" onClick={handleDeleteUang}>
         delete

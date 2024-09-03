@@ -32,6 +32,7 @@ body {
     @apply bg-rose-600 text-rose-100 rounded-md border p-2;
   }
   .card-belanja {
-    @apply flex flex-row justify-between text-white p-3 border rounded-md bg-violet-700;
+    @apply border-r border-b border-l border-gray-400  bg-white rounded-b  p-3 flex flex-row justify-between text-slate-900
+    /* flex flex-row justify-between text-white p-3 border rounded-md bg-violet-700; */;
   }
 }
